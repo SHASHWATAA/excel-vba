@@ -4,9 +4,9 @@ Dim temp
 
 
 For Each c In range:
-
-temp = temp + c + delimiter
-
+If Not (c = "") Then
+    temp = temp + c + delimiter
+End If
 Next c
 
 Join = Left(temp, Len(temp) - Len(delimiter))
@@ -20,9 +20,9 @@ delimiter = "', '"
 temp = "['"
 
 For Each c In range:
-
-temp = temp + c + delimiter
-
+If Not (c = "") Then
+    temp = temp + c + delimiter
+End If
 Next c
 
 pythonJoin = Left(temp, Len(temp) - Len(delimiter)) + "']"
